@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <title>Boostrap Starter Page</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- jQuery (Bootstrap JS plugins depend on it) -->
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://d3js.org/d3.v5.js"></script>
+    <script src="js/d3.layout.cloud.js"></script>
+    <header>
+        <nav id="navigation" class="navbar-default container-fluid">
+            <ul class="nav navbar-nav text-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">6 Cryptocurrency Relation</a>
+                </li>
+                <li class="nav-item  active">
+                    <a class="nav-link" href="index2.html">Daily Difference</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index3.html">Bitcoin with News</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cloud.html">Word cloud</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div id='main-content' class="container-fluid">
+        <!-- chart -->
+        <div id="chart">
+            <svg id="dot" width="20" height="20" style="opacity: 0;">
+                <circle fill='black' r='5' transform='translate(10,10)'></circle>
+            </svg>
+        </div>
+        <div id="date" class="text-center" style="font-size: 20px; font-weight: bold;">
+        </div>
+        <div>
+            <svg id="cloud" class="center-block">
+                <g>
+                </g>
+            </svg>
+        </div>
+        <script src="js/daily_differnce.js"></script>
+        <!-- words
+        <div id='words' class="text-center center-block" style="font-size: 22px;">
+            <div></div>
+        </div>  -->
+    </div>
+</body>
+
+</html>
