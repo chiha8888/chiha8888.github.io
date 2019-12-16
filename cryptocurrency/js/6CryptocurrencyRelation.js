@@ -19,7 +19,7 @@ var clip = svg.append('defs').append('svg:clipPath')
     .attr('x', padding)
     .attr('y', padding);
 
-d3.csv("coin_2019NEW.csv").then(function(data) {
+d3.csv("coin_2019NEW_log.csv").then(function(data) {
 
     // change the time format
     data.forEach(function(d) {

@@ -26,7 +26,7 @@ var clip = svg.append('defs').append('svg:clipPath')
 var pointing_date = null;
 var date_words = new Object();
 
-d3.csv("bitcoin2019.csv").then(function(data) {
+d3.csv("bitcoin2018_1_to_6.csv").then(function(data) {
 
 
     // change the time format
