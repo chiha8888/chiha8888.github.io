@@ -1,8 +1,8 @@
 // Width and height
-var chart_width = 1600;
+var chart_width = 1300;
 var chart_height = 600;
-var cloud_width = 1200;
-var cloud_height = 300;
+var cloud_width = 1000;
+var cloud_height = 250;
 var padding = 60;
 var colorscale = d3.scaleLinear().domain([0, 9])
     .range(["#ff0000", "#0000ff"])
@@ -131,7 +131,7 @@ d3.csv("bitcoin2018_1_to_6.csv").then(function(data) {
 
             //update date div
             d3.select("#date")
-            .text(pointing_date.substr(4))
+            .text(pointing_date.substr(4)+' daily difference: '+currentY.toFixed(2))
 
             //update word cloud 
             d3.layout.cloud()

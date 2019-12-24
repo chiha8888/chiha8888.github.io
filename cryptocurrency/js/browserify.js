@@ -1,5 +1,5 @@
-var cloud_width = 1500,
-    cloud_height = 900;
+var cloud_width = 1300,
+    cloud_height = 800;
 
 var time_parse = d3.timeParse("%Y-%m-%d"); //convert string to date
 

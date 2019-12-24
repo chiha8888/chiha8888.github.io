@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link type="text/css" rel="stylesheet" href="./css/matrix.css">
+    <link type="text/css" rel="stylesheet" href="./css/scatter-matrix.css">
+    <title>Boostrap Starter Page</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body>
+    <header>
+        <nav id="navigation" class="navbar-default container-fluid">
+            <ul class="nav navbar-nav text-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Cryptocurrency Relations</a>
+                </li>
+                <li class="vav-item active">
+                    <a class="nav-link" href="matrix.html">Cryptocurrency Multiple View</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index2.html">Daily Difference With News</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index3.html">With News</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cloud.html">Word cloud</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div id="main_container" class="container">
+        <div>
+            <h2 style="font-size:42px;" align="center">
+                Cryptocurrency Multiple View
+            </h2>
+        </div>
+        <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+        <script src="./js/scatter-matrix.js"></script>
+        <script type="text/javascript">
+        var sm = new ScatterMatrix('reduce_diff2019_log.csv');
+        sm.render();
+        </script>
+    </div>
+</body>
+
+</html>
