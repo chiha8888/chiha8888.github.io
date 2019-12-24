@@ -43,10 +43,11 @@
 
 #tooltip {
     position: absolute;
-    width: 150px;
-    padding: 10px;
+    text-align: center;
+    width: 140px;
+    height: 40px;
+    padding: 0px;
     background-color: white;
-    border-radius: 5px;
     border: 1px solid #000;
     pointer-events: none;
     font-family: sans-serif;

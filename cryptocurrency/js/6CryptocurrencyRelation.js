@@ -1,6 +1,6 @@
 // Width and height
-var chart_width = 1600;
-var chart_height = 800;
+var chart_width = 1300;
+var chart_height = 700;
 var padding = 60;
 
 var time_parse = d3.timeParse("%Y-%m-%d");
@@ -73,7 +73,9 @@ d3.csv("coin_2019NEW_log.csv").then(function(data) {
         // .attr('class', 'y-label')
         .attr('text-anchor', 'end')
         .attr('x', padding + 10)
-        .attr('y', padding);
+        .attr('y', padding)
+        .text("log(y+1)")
+        .attr('font-weight', 'bold');
 
 
     // color palette
@@ -107,7 +109,7 @@ d3.csv("coin_2019NEW_log.csv").then(function(data) {
                 })
                 (d.values);
         })
-        /*
+        
         .on('mouseover', function(d) {
             var mouse = d3.mouse(this);
             var x = mouse[0] - 10;
@@ -117,22 +119,29 @@ d3.csv("coin_2019NEW_log.csv").then(function(data) {
             var currentY = newYScale.invert(mouse[1]);
 
             d3.select('#dot')
-                .style('display', 'block')
+                .style('opacity',1.0)
                 .attr('transform', 'translate(' + x + ' ' + y + ')');
 
             d3.select('#tooltip')
-                .style('left', x)
-                .style('top', y)
-                .style('display', 'block')
-                .text("value：" + currentY);
+                .attr('transform', 'translate(' + (x-60) + ' ' + (y+20) + ')')
+                //.attr('x', x)
+                //.attr('y', y)
+                .style('opacity',1.0)
+                .selectAll('text')
+                .attr('transform', 'translate(' + (70) + ' ' + 25 + ')')
+                .style('text-anchor', 'middle')
+                .text("value: " + (Math.pow(10,currentY)-1).toFixed(2));
         })
         
         .on('mouseout', function() {
-            d3.select('#tooltip')
-                .style('display', 'none');
             d3.select('#dot')
-                .attr('display', 'none');
-        });*/
+            .transition().delay(4000).duration(1000)
+                .style('opacity',0);
+            d3.select('#tooltip')
+            .transition().delay(4000).duration(1000)
+                .style('opacity',0);
+            
+        });
 
 
 
@@ -162,6 +171,9 @@ d3.csv("coin_2019NEW_log.csv").then(function(data) {
                     })
                     (d.values);
             });
+
+            d3.select('#dot').style("opacity",0);
+            d3.select('#tooltip').style("opacity",0);
         });
     svg.call(zooming);
 

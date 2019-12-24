@@ -129,7 +129,6 @@ d3.csv("bitcoin2018_1_to_6.csv").then(function(data) {
                 .attr('transform', 'translate(' + x + ' ' + y + ')');
 
             pointing_date = currentX.toString().substr(0, 15);
-            console.log(currentY)
             //update date div
             d3.select("#date")
             .text(pointing_date.substr(4)+' daily difference: '+currentY.toFixed(2))

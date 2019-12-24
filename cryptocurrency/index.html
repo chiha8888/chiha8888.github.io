@@ -17,6 +17,7 @@
 </head>
 
 <body>
+    <script src="https://d3js.org/d3.v5.js"></script>
     <header>
         <nav id="navigation" class="navbar-default container-fluid">
             <ul class="nav navbar-nav text-center">
@@ -40,17 +41,15 @@
     </header>
     <div id='main-content' class="container-fluid">
         <div id="chart">
-            <!--
-            <div id="tooltip" style="display: none;"></div>
-            <svg id="dot" width="20" height="20">
-              <circle fill='black' r='5' transform='translate(10,10)'></circle>
-            </svg>-->
+            <svg id="tooltip" style="opacity: 0;">
+                <text></text>
+            </svg>
+            <svg id="dot" width="20" height="20" style="opacity: 0;">
+                <circle fill='black' r='5' transform='translate(10,10)'></circle>
+            </svg>
         </div>
-        <script src="https://d3js.org/d3.v5.js"></script>
         <script src="js/6CryptocurrencyRelation.js"></script>
     </div>
-
-
     <!-- jQuery (Bootstrap JS plugins depend on it) -->
     <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
