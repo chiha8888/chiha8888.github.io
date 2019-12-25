@@ -17,11 +17,10 @@
 </head>
 
 <body>
-    <script src="https://d3js.org/d3.v5.js"></script>
     <header>
         <nav id="navigation" class="navbar-default container-fluid">
             <ul class="nav navbar-nav text-center">
-                <li class="nav-item  active">
+                <li class="nav-item">
                     <a class="nav-link" href="index.html">Cryptocurrency Relations</a>
                 </li>
                 <li class="vav-item">
@@ -36,26 +35,22 @@
                 <li class="nav-item">
                     <a class="nav-link" href="cloud.html">Word cloud</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item active">
                     <a class="nav-link" href="question.html">Best For Trading</a>
                 </li>
             </ul>
         </nav>
     </header>
     <div id='main-content' class="container-fluid">
-        <div id="chart">
-            <svg id="tooltip" style="opacity: 0;">
-                <text></text>
-            </svg>
-            <svg id="dot" width="20" height="20" style="opacity: 0;">
-                <circle fill='black' r='5' transform='translate(10,10)'></circle>
-            </svg>
+        <div class="text-center" style="font-size: 24px; margin: 20px auto 20px; font-weight: bold;">
+            Which day of week is best for trading?
         </div>
-        <script src="js/6CryptocurrencyRelation.js"></script>
+        <div class="text-center">
+            <img src="day_of_week.png" class="img-fluid" alt="" width="700" height="800">
+        </div>
     </div>
     <!-- jQuery (Bootstrap JS plugins depend on it) -->
-    <script src="js/jquery-1.11.3.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    
 </body>
 
 </html>

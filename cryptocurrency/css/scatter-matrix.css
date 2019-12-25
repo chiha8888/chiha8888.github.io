@@ -15,11 +15,11 @@ circle { fill: #ccc; fill-opacity: .5; }
 
 .cell text { pointer-events: none; }
 
-.color-0  { fill: #800; }
-.color-1  { fill: #080; }
-.color-2  { fill: #008; }
-.color-3  { fill: #440; }
-.color-4  { fill: #044; }
+.color-0  { fill: #02F; }
+.color-1  { fill: #F90; }
+.color-2  { fill: #E22; }
+.color-3  { fill: #7CE; }
+.color-4  { fill: #3B4; }
 .color-5  { fill: #404; }
 .color-6  { fill: #400; }
 .color-7  { fill: #040; }
