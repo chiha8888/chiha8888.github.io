@@ -131,7 +131,7 @@ d3.csv("bitcoin2018_1_to_6.csv").then(function(data) {
 
             //update date div
             d3.select("#date")
-            .text(pointing_date.substr(4)+' daily difference: '+currentY.toFixed(2))
+            .text(pointing_date.substr(4)+' value: '+currentY.toFixed(2))
 
             //update word cloud 
             d3.layout.cloud()
